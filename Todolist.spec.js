@@ -11,4 +11,13 @@ describe('TodoList', () => {
         expect(todolist).toBeTruthy()
     })
 
+    it('can save a new item', () => {
+        //given
+        let todolist = new TodoList([])
+        //when
+        todolist.addNewItem('new item!')
+        //then
+        expect(todolist.myItems).toEqual(['new item!'])
+    })
+
 })
