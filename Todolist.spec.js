@@ -20,4 +20,17 @@ describe('TodoList', () => {
         expect(todolist.myItems).toEqual(['new item!'])
     })
 
+    it('can save two items', () => {
+        //given
+        let todolist = new TodoList([])
+        //when
+        todolist.addNewItem('faire les courses')
+        todolist.addNewItem('aller a la piscine')
+        //then
+        expect(todolist.myItems.length).toEqual(2)
+
+    }
+    
+    )
+
 })
