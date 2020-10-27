@@ -29,8 +29,13 @@ describe('TodoList', () => {
         //then
         expect(todolist.myItems.length).toEqual(2)
 
-    }
-    
-    )
-
+    })
+    it('can delete last added item', () => {
+        //given
+        let todolist = new TodoList(['faire les courses','se confiner'])
+        //when
+        todolist.deleteLastItem()
+        //then
+        expect(todolist.myItems).toEqual(['faire les courses'])
+    })
 })

@@ -7,6 +7,10 @@ const TodoList = class TodoList{
     addNewItem(item) {
         this.myItems.push(item)
     }
+
+    deleteLastItem() {
+        this.myItems.pop()
+    }
 }
 
 module.exports = TodoList
