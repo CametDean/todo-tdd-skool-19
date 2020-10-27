@@ -11,6 +11,11 @@ const TodoList = class TodoList{
     deleteLastItem() {
         this.myItems.pop()
     }
+
+    renameItem(itemOldName, itemNewName) {
+        const index = this.myItems.indexOf(itemOldName)
+        this.myItems[index] = itemNewName
+    }
 }
 
 module.exports = TodoList
